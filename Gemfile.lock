@@ -6,6 +6,7 @@ GEM
     nokogiri (1.11.3)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
+    open-uri (0.1.0)
     racc (1.5.2)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
@@ -26,6 +27,7 @@ PLATFORMS
 
 DEPENDENCIES
   nokogiri
+  open-uri
   rspec
 
 RUBY VERSION
