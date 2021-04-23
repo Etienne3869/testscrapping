@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
+def global_scrap
 page = Nokogiri::HTML(URI.open("https://coinmarketcap.com/all/views/all/"))  
 
 crypto_name = page.xpath('//tr/td[2]//a[contains(@href, "currencies")]')
@@ -19,7 +20,7 @@ end
 
 global = Hash[crypto_name_text.zip(crypto_price_text)]
 puts global
-
+end
 
 
 #page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))

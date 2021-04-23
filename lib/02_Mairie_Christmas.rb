@@ -1,6 +1,8 @@
 require 'nokogiri'
 require 'open-uri'
 
+
+def mail_scrapper
 page = Nokogiri::HTML(URI.open("http://www.annuaire-des-mairies.com/val-d-oise.html"))
 
 cities_bad_url = page.xpath('//tr//td//a[contains(@href,"95")]')
@@ -33,6 +35,7 @@ end
 names_and_mails = Hash[cities_name.zip(cities_mail)]
 
 puts names_and_mails
+end 
 
 
 

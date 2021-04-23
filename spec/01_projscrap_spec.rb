@@ -1,7 +1,10 @@
-require_relative '../lib/dark_trader.rb'
+require_relative '../lib/01_projetscrap.rb'
 
-describe "Gives us the currencies names and their prices" do
-    it "Gives us the currencies names and their prices" do
-      expect(hello).to eq("Hello world!")
+describe "the dark trader function" do
+    it "should return an answer" do
+        expect(global_scrap).not_to be_nil
     end
-  end
+    it "should be an Hash" do
+        expect(global_scrap).to be_a(Hash)
+    end
+end
